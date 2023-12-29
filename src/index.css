@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Monserrat";
+  src: url("./assets/fonts/Montserrat.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Monserrat", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.align_center {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
