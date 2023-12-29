@@ -2,6 +2,7 @@ import useData from '../../hooks/useData'
 
 import LinkWithIcon from '../Common/LinkWithIcon'
 import './ProductsSidebar.css'
+import config from '../../config.json'
 
 const ProductsSidebar = () => {
 
@@ -21,7 +22,7 @@ const ProductsSidebar = () => {
                   key={_id}
                   title={name}
                   link={`/products?category=${name}`}
-                  icon={`http://localhost:5000/category/${image}`}
+                  icon={`${config.backendURL}/category/${image}`}
                   sidebar={true}
                 />
               )

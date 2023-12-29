@@ -7,6 +7,7 @@ import basket from '../../assets/basket.png'
 import { useContext } from 'react';
 import CartContext from '../../contexts/CartContext';
 import UserContext from '../../contexts/UserContext';
+import config from '../../config.json'
 
 const ProductCard = ({product}) => {
   
@@ -17,7 +18,7 @@ const ProductCard = ({product}) => {
         <article className="product_card">
             <div className="product_image">
                 <Link to={`/product/${product._id}`}>
-                    <img src={`http://localhost:5000/products/${product.images[0]}`} alt="Product Image" />
+                    <img src={`${config.backendURL}/products/${product.images[0]}`} alt="Product Image" />
                 </Link>
             </div>
 

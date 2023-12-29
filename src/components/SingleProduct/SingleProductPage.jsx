@@ -6,6 +6,7 @@ import useData from '../../hooks/useData';
 import Loader from './../Common/Loader';
 import CartContext from '../../contexts/CartContext';
 import UserContext from '../../contexts/UserContext';
+import config from '../../config.json'
 
 const SingleProductPage = () => {
 
@@ -35,7 +36,7 @@ const SingleProductPage = () => {
                     <div className="align_center">
                         <div className="single_products_thumbnails">
                             {images.map((image, index) => <img
-                                src={`http://localhost:5000/products/${image}`}
+                                src={`${config.backendURL}/products/${image}`}
                                 alt={title}
                                 key={index}
                                 onClick={() => setSelectedImage(index)}
@@ -43,7 +44,7 @@ const SingleProductPage = () => {
                             )}
                         </div>
 
-                        <img src={`http://localhost:5000/products/${images[selectedImage]}`} alt={title} className='single_product_display' />
+                        <img src={`${config.backendURL}/products/${images[selectedImage]}`} alt={title} className='single_product_display' />
                     </div>
                     <div className="single_product_details">
                         <h1 className="single_product_title">
